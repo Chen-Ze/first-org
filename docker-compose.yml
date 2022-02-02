@@ -1,0 +1,35 @@
+version: "3.8"
+
+networks:
+  corp:
+
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: nginx.Dockerfile
+    image: my-nginx-image:test
+    ports:
+      - 80:80
+    networks:
+      - corp
+  api:
+    build:
+      context: ./
+      dockerfile: repo.Dockerfile
+    command: node ./dist/apps/api/main.js
+    image: my-repo-image:test
+    ports:
+      - 3333:3333
+    networks:
+      - corp
+  front:
+    command: npx next start ./dist/apps/front -p 4200
+    image: my-repo-image:test
+    ports:
+      - 4200:4200
+    networks:
+      - corp
+    depends_on:
+      - api
+
