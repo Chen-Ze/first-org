@@ -9,8 +9,7 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "serve": "nx run-many --target=serve --projects=api,front --parallel",
+    "test": "nx affected:test",
     "prepare": "husky install"
   },
   "private": true,
