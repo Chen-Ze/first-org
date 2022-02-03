@@ -19,6 +19,7 @@ export function Index() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const i = 4;
   const j = 5;
+  const ddd = 10;
 
   useEffect(() => {
     fetch('/api/todo')
