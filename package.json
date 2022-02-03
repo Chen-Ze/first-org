@@ -2,6 +2,10 @@
   "name": "first-org",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chen-Ze/first-org.git"
+  },
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
@@ -45,6 +49,7 @@
     "@nrwl/tao": "13.7.1",
     "@nrwl/web": "13.7.1",
     "@nrwl/workspace": "13.7.1",
+    "@semantic-release/exec": "^6.0.3",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
     "@types/cytoscape": "^3.19.4",
@@ -74,6 +79,7 @@
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "react-test-renderer": "17.0.2",
+    "semantic-release": "^19.0.2",
     "ts-jest": "27.0.5",
     "typedoc": "^0.22.11",
     "typescript": "~4.5.2"

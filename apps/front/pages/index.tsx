@@ -18,6 +18,7 @@ const StyledPage = styled.div`
 export function Index() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const i = 4;
+  const j = 5;
 
   useEffect(() => {
     fetch('/api/todo')
