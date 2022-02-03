@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { Todo } from '@first-org/data'
+import { Todo } from '@first-org/data';
 import { Todos } from '@first-org/ui';
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 const DynamicCyto = dynamic(
   () => import('@first-org/dynamic-ui').then((mod) => mod.Cyto),
@@ -10,7 +10,7 @@ const DynamicCyto = dynamic(
 );
 
 const StyledPage = styled.div`
-  .todo{
+  .todo {
     color: red;
   }
 `;
@@ -25,7 +25,7 @@ export function Index() {
   }, []);
 
   function addTodo() {
-            fetch('/api/todo', {
+                      fetch('/api/todo', {
       method: 'POST',
       body: '',
     })
@@ -38,7 +38,7 @@ export function Index() {
   return (
     <StyledPage>
       <h1>Todos</h1>
-      <DynamicCyto/>
+      <DynamicCyto />
       <ul>
         <Todos todos={todos} />
         <button id={'add-todo'} onClick={addTodo}>
