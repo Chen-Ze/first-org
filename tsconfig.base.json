@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@first-org/data": ["libs/data/src/index.ts"],
+      "@first-org/dynamic-ui": ["libs/dynamic-ui/src/index.ts"],
+      "@first-org/paradigm": ["libs/paradigm/src/index.ts"],
       "@first-org/ui": ["libs/ui/src/index.ts"]
     }
   },

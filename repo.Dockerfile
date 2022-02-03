@@ -5,6 +5,7 @@ ARG BUILD_FLAG
 
 WORKDIR /app/repo
 COPY . .
+RUN apk add --no-cache libc6-compat
 RUN apk add --no-cache --virtual .gyp \
         python3 \
         make \

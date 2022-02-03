@@ -1,0 +1,23 @@
+{
+  "root": "libs/dynamic-ui",
+  "sourceRoot": "libs/dynamic-ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/dynamic-ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dynamic-ui"],
+      "options": {
+        "jestConfig": "libs/dynamic-ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

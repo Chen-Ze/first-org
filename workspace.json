@@ -3,8 +3,10 @@
   "projects": {
     "api": "apps/api",
     "data": "libs/data",
+    "dynamic-ui": "libs/dynamic-ui",
     "front": "apps/front",
     "front-e2e": "apps/front-e2e",
+    "paradigm": "libs/paradigm",
     "ui": "libs/ui"
   }
 }
