@@ -25,7 +25,7 @@ export function Index() {
   }, []);
 
   function addTodo() {
-                      fetch('/api/todo', {
+    fetch('/api/todo', {
       method: 'POST',
       body: '',
     })
